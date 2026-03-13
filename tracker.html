@@ -15,6 +15,41 @@
 
 <p>Session Time: <span id="sessionTime">0</span> seconds</p>
 <p>Attention State: <span id="attentionState">Idle</span></p>
+<h2 class="task-title">Activity Illustration Section</h2>
+
+<div class="activity-section">
+
+  <div class="activity-card">
+    <img src="images/img7.jpeg" alt="Read">
+    <h3>Read Article</h3>
+    <p>Simulate reading interaction</p>
+  </div>
+
+  <div class="activity-card">
+    <img src="images/img8.png" alt="Task">
+    <h3>Solve Task</h3>
+    <p>Simulate focused activity</p>
+  </div>
+
+  <div class="activity-card">
+    <img src="images/img9.png" alt="Data">
+    <h3>Explore Data</h3>
+    <p>Simulate analytical attention</p>
+  </div>
+
+</div>
+<h2 class="task-title">Interactive Attention Tasks</h2>
+<div class="task-container">
+
+  <button class="task-btn" id="readBtn">Read Article</button>
+  <button class="task-btn" id="riddleBtn">Solve Riddle</button>
+  <button class="task-btn" id="quizBtn">Quiz</button>
+  <button class="task-btn" id="memoryBtn">Memory Game</button>
+  <button class="task-btn" id="dataBtn">Data Explore</button>
+
+</div>
+
+
 <div class="stats">
 
 <p>Clicks: <span id="clickCount">0</span></p>
@@ -22,13 +57,134 @@
 <p>Mouse Movement: <span id="moveCount">0</span></p>
 <p>Idle Time: <span id="idleCount">0</span></p>
 <p>Tab Switches: <span id="tabSwitchCount">0</span></p>
+
 <canvas id="attentionChart"></canvas>
 <div id="heatmapContainer" style="display:flex; 
 justify-content:center; flex-wrap:wrap;
 margin-top:20px;"></div>
 </div>
+<div id="articlePopup" class="popup">
+
+  <div class="popup-content">
+
+    <span id="closeArticle">&times;</span>
+
+    <h2>Quick Reading Activity</h2>
+
+    <p>
+    Human attention during digital work is often fragmented.
+    Interaction signals such as mouse movement, typing,
+    and tab switching often reveal shifts in focus.
+    </p>
+
+    <p>
+    By observing these signals we can map attention patterns
+    without judging productivity or monitoring behaviour.
+    </p>
+
+    <p>
+    This prototype demonstrates how interaction signals
+    can represent attention flow during digital tasks.
+    </p>
+
+  </div>
+
+</div>
+
+<div id="riddlePopup" class="popup">
+
+  <div class="popup-content">
+
+    <span id="closeRiddle">&times;</span>
+
+    <h2>Riddle Challenge</h2>
+
+    <p>
+    I speak without a mouth and hear without ears.
+    I have no body, but I come alive with wind.
+    What am I?
+    </p>
+
+    <input type="text" id="riddleAnswer" placeholder="Type your answer">
+
+    <button id="submitRiddle">Submit</button>
+
+    <p id="riddleResult"></p>
+
+  </div>
+
+</div>
+
+<div id="quizPopup" class="popup">
+
+  <div class="popup-content">
+
+    <span id="closeQuiz">&times;</span>
+
+    <h2>Quick Quiz</h2>
+
+    <p>Which language is mainly used to structure web pages?</p>
+
+    <button class="quiz-option">HTML</button>
+    <button class="quiz-option">Python</button>
+    <button class="quiz-option">Java</button>
+    <button class="quiz-option">C++</button>
+
+    <p id="quizResult"></p>
+
+  </div>
+
+</div>
+
+
+<div id="memoryPopup" class="popup">
+
+  <div class="popup-content">
+
+    <span id="closeMemory">&times;</span>
+
+    <h2>Memory Challenge</h2>
+
+    <p>Memorize the sequence for 5 seconds:</p>
+
+    <h3 id="memorySequence">7 2 9 4</h3>
+
+    <p>Type the sequence:</p>
+
+    <input type="text" id="memoryInput" placeholder="Enter numbers">
+
+    <button id="checkMemory">Check</button>
+
+    <p id="memoryResult"></p>
+
+  </div>
+
+</div>
+<div id="dataPopup" class="popup">
+
+  <div class="popup-content">
+
+    <span id="closeData">&times;</span>
+
+    <h2>Explore Interaction Data</h2>
+
+    <p>Click the buttons below to explore how interaction signals affect attention.</p>
+
+    <button id="showClicks">Show Click Count</button>
+    <button id="showKeys">Show Keyboard Count</button>
+    <button id="showTabs">Show Tab Switches</button>
+
+    <p id="dataResult"></p>
+
+  </div>
+
+</div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="script.js"></script>
+
+  
+
+
 
 </body>
 

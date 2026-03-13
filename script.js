@@ -223,3 +223,142 @@ function updateHeatmap(activity){
         container.removeChild(container.children[0])
     }
 }
+// Article popup controls
+
+const readBtn = document.getElementById("readBtn");
+const articlePopup = document.getElementById("articlePopup");
+const closeArticle = document.getElementById("closeArticle");
+
+readBtn.onclick = function() {
+  articlePopup.style.display = "block";
+};
+
+closeArticle.onclick = function() {
+  articlePopup.style.display = "none";
+};
+// Riddle popup
+
+const riddleBtn = document.getElementById("riddleBtn");
+const riddlePopup = document.getElementById("riddlePopup");
+const closeRiddle = document.getElementById("closeRiddle");
+
+riddleBtn.onclick = function() {
+  riddlePopup.style.display = "block";
+};
+
+closeRiddle.onclick = function() {
+  riddlePopup.style.display = "none";
+};
+
+// Riddle answer check
+
+const submitRiddle = document.getElementById("submitRiddle");
+const riddleAnswer = document.getElementById("riddleAnswer");
+const riddleResult = document.getElementById("riddleResult");
+
+submitRiddle.onclick = function() {
+
+  if (riddleAnswer.value.toLowerCase() === "echo") {
+    riddleResult.innerText = "Correct! 🎉";
+  } else {
+    riddleResult.innerText = "Try again!";
+  }
+
+};
+// Quiz popup
+
+const quizBtn = document.getElementById("quizBtn");
+const quizPopup = document.getElementById("quizPopup");
+const closeQuiz = document.getElementById("closeQuiz");
+
+quizBtn.onclick = function() {
+  quizPopup.style.display = "block";
+};
+
+closeQuiz.onclick = function() {
+  quizPopup.style.display = "none";
+};
+
+
+// Quiz logic
+
+const quizOptions = document.querySelectorAll(".quiz-option");
+const quizResult = document.getElementById("quizResult");
+
+quizOptions.forEach(option => {
+
+  option.onclick = function() {
+
+    if(option.innerText === "HTML"){
+      quizResult.innerText = "Correct! 🎉";
+    } else {
+      quizResult.innerText = "Wrong answer!";
+    }
+
+  };
+
+});
+
+ // Memory game popup
+
+const memoryBtn = document.getElementById("memoryBtn");
+const memoryPopup = document.getElementById("memoryPopup");
+const closeMemory = document.getElementById("closeMemory");
+
+memoryBtn.onclick = function() {
+  memoryPopup.style.display = "block";
+};
+
+closeMemory.onclick = function() {
+  memoryPopup.style.display = "none";
+};
+
+// Memory answer check
+
+const checkMemory = document.getElementById("checkMemory");
+const memoryInput = document.getElementById("memoryInput");
+const memoryResult = document.getElementById("memoryResult");
+
+checkMemory.onclick = function() {
+
+  if(memoryInput.value === "7294"){
+    memoryResult.innerText = "Correct! 🎉";
+  } else {
+    memoryResult.innerText = "Not correct, try again.";
+  }
+
+};
+
+// Data explore popup
+
+const dataBtn = document.getElementById("dataBtn");
+const dataPopup = document.getElementById("dataPopup");
+const closeData = document.getElementById("closeData");
+
+dataBtn.onclick = function() {
+  dataPopup.style.display = "block";
+};
+
+closeData.onclick = function() {
+  dataPopup.style.display = "none";
+};
+
+
+// Data interaction buttons
+
+const showClicks = document.getElementById("showClicks");
+const showKeys = document.getElementById("showKeys");
+const showTabs = document.getElementById("showTabs");
+const dataResult = document.getElementById("dataResult");
+
+showClicks.onclick = function(){
+  dataResult.innerText = "Total Clicks: " + clickCount;
+};
+
+showKeys.onclick = function(){
+  dataResult.innerText = "Keyboard Activity: " + keyCount;
+};
+
+showTabs.onclick = function(){
+  dataResult.innerText = "Tab Switches: " + tabSwitchCount;
+};
