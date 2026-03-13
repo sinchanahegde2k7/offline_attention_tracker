@@ -1,0 +1,110 @@
+body {
+  margin:0;
+  padding:0;
+  font-family: 'Arial', sans-serif;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg, #1921ab, #669fb0);
+  color:rgb(9, 9, 9);
+}
+
+.cover-container {
+  text-align:center;
+  background: rgba(225, 225, 225, 0.15);
+  padding: 50px 80px;
+  border-radius:20px;
+  box-shadow: 0 8px 20px rgba(119, 64, 179, 0.3);
+}
+
+.cover-container h1 {
+  font-size:3em;
+  margin-bottom:20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.cover-container p {
+  font-size:1.2em;
+  margin-bottom:40px;
+}
+
+.cover-container button {
+  padding:15px 35px;
+  font-size:1.2em;
+  border:none;
+  border-radius:10px;
+  background:#0c3ae0f4;
+  cursor:pointer;
+  transition: all 0.3s ease;
+}
+
+.cover-container button:hover {
+  background:#1228eb;
+  transform: scale(1.05);
+}
+.cover-images {
+  display: flex;
+  justify-content: center;  /* center the row */
+  gap: 20px;                /* space between images */
+  margin-bottom: 30px;      /* space below images */
+}
+
+.cover-img {
+  width: 120px;             /* size of images */
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;       /* circular images */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.cover-img:hover {
+  transform: scale(1.05);
+}
+/* Fade in and slide down for title */
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cover-container h1 {
+  animation: fadeSlideDown 1s ease forwards;
+}
+/* Fade in with delay for description */
+.cover-container p {
+  animation: fadeSlideDown 1s ease forwards;
+  animation-delay: 0.5s;
+}
+/* Zoom in each image with slight delay */
+.cover-img {
+  opacity: 0;
+  animation: zoomIn 0.8s ease forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Add delay for each image using :nth-child */
+.cover-images img:nth-child(1) { animation-delay: 0.3s; }
+.cover-images img:nth-child(2) { animation-delay: 0.5s; }
+.cover-images img:nth-child(3) { animation-delay: 0.7s; }
+.cover-container button {
+  opacity: 0;
+  animation: fadeSlideDown 0.8s ease forwards;
+  animation-delay: 1.2s;
+}

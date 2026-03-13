@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Attention Mapper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Offline Human Attention Mapper</h1>
+
+<button id="startBtn">Start Session</button>
+<button id="stopBtn">Stop Session</button>
+
+<p>Session Time: <span id="sessionTime">0</span> seconds</p>
+<p>Attention State: <span id="attentionState">Idle</span></p>
+<div class="stats">
+
+<p>Clicks: <span id="clickCount">0</span></p>
+<p>Keyboard Activity: <span id="keyCount">0</span></p>
+<p>Mouse Movement: <span id="moveCount">0</span></p>
+<p>Idle Time: <span id="idleCount">0</span></p>
+<p>Tab Switches: <span id="tabSwitchCount">0</span></p>
+<canvas id="attentionChart"></canvas>
+<div id="heatmapContainer" style="display:flex; 
+justify-content:center; flex-wrap:wrap;
+margin-top:20px;"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
