@@ -33,6 +33,5 @@
 
 ```bash
 git clone https://github.com/sinchanahegde2k7/offline_attention_tracker.git
-
 ```bash
 git clone https://github.com/<yourusername>/Offline-Attention-Tracker.git
